@@ -1,0 +1,9 @@
+{
+  "name": "Express web app / API",
+  "description": "Node.js website + JSON API. Reachable publicly at /apps/<id>/ or on your own domain.",
+  "type": "web",
+  "runtime": "node",
+  "entry": "server.js",
+  "env": {},
+  "order": 4
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Telegram bot (Node.js)",
+  "description": "Telegram bot using grammY with /start, /ping and an echo handler. Get a token from @BotFather.",
+  "type": "worker",
+  "runtime": "node",
+  "entry": "bot.js",
+  "env": { "TELEGRAM_BOT_TOKEN": "" },
+  "order": 7
+}

@@ -1,0 +1,13 @@
+{
+  "name": "OmniHost",
+  "short_name": "OmniHost",
+  "description": "Host and manage Discord bots, web apps, static sites and workers.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "discord.py bot (Python)",
+  "description": "Python 3 bot using discord.py with a /ping slash command. Runs in its own virtual environment.",
+  "type": "discord",
+  "runtime": "python",
+  "entry": "main.py",
+  "env": { "DISCORD_BOT_TOKEN": "" },
+  "order": 3
+}

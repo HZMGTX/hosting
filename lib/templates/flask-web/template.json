@@ -1,0 +1,9 @@
+{
+  "name": "Flask web app (Python)",
+  "description": "Python website + JSON API with Flask, served by Waitress. Reachable at /apps/<id>/ or your own domain.",
+  "type": "web",
+  "runtime": "python",
+  "entry": "app.py",
+  "env": {},
+  "order": 5
+}

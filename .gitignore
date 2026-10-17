@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Runtime data — services, secrets, logs, backups. Never commit these.
+hosted_bots/
+database.json
+database.json.*
+.omnihost/
+data/
+uploads/
+*.bak
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local clutter
+archive-*/
+*.log
+.claude/

@@ -1,0 +1,37 @@
+/* Live console */
+.console {
+  background: var(--console-bg); color: var(--console-text);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  display: flex; flex-direction: column; overflow: hidden; min-height: 420px; height: calc(100vh - 330px);
+}
+.console-toolbar { display: flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.6rem; border-bottom: 1px solid #1c222d; background: #0c1016; flex-wrap: wrap; }
+.console-toolbar .input { background: #0a0d12; border-color: #252c39; color: #d1d9e6; padding: 0.3rem 0.55rem; font-size: 0.82rem; max-width: 240px; }
+.console-toolbar .seg { background: #0a0d12; border-color: #252c39; }
+.console-toolbar .seg button { color: #8a94a6; }
+.console-toolbar .seg button.active { background: #1b2130; color: #e5e9f0; }
+.console-toolbar .btn { background: #141924; border-color: #252c39; color: #c4ccd8; }
+.console-toolbar .btn:hover { background: #1b2130; }
+.console-lines { flex: 1; overflow-y: auto; padding: 0.5rem 0; font-family: var(--mono); font-size: 0.8rem; line-height: 1.55; }
+.console-line { display: flex; gap: 0.75rem; padding: 0 0.85rem; white-space: pre-wrap; word-break: break-word; }
+.console-line:hover { background: rgba(255, 255, 255, 0.03); }
+.console-lines.nowrap-lines { overflow-x: auto; }
+.console-lines.nowrap-lines .console-line { white-space: pre; word-break: normal; width: max-content; min-width: 100%; }
+.console-lines.no-ts .ts { display: none; }
+.console-line .ts { color: #4f5869; flex: none; user-select: none; }
+.console-line.err .msg { color: #ff8a8a; }
+.console-line.sys .msg { color: #8fb4ff; }
+.console-line mark { background: rgba(245, 158, 11, 0.35); color: inherit; border-radius: 2px; }
+.console-empty { color: #4f5869; padding: 1rem 0.85rem; font-family: var(--mono); font-size: 0.8rem; }
+.console-input { display: flex; align-items: center; gap: 0.5rem; border-top: 1px solid #1c222d; background: #0a0d12; padding: 0 0.6rem; }
+.console-input span { color: #6d7cff; font-family: var(--mono); }
+.console-input input { flex: 1; background: transparent; border: 0; outline: none; color: #e5e9f0; font-family: var(--mono); font-size: 0.82rem; padding: 0.65rem 0; }
+.console-input input:disabled { opacity: 0.5; }
+.jump-bottom { position: absolute; right: 1rem; bottom: 3.5rem; }
+.console-wrap { position: relative; }
+
+/* ANSI colours */
+.a-b { font-weight: 700; } .a-d { opacity: 0.7; } .a-i { font-style: italic; } .a-u { text-decoration: underline; }
+.a-30 { color: #545c6c; } .a-31 { color: #ff7b7b; } .a-32 { color: #6ee7a0; } .a-33 { color: #fcd34d; }
+.a-34 { color: #7aa7ff; } .a-35 { color: #d68bff; } .a-36 { color: #5ee0f0; } .a-37 { color: #e5e9f0; }
+.a-90 { color: #7a8394; } .a-91 { color: #ff9b9b; } .a-92 { color: #8ff0b8; } .a-93 { color: #fde68a; }
+.a-94 { color: #a5c2ff; } .a-95 { color: #e5b3ff; } .a-96 { color: #8aedf7; } .a-97 { color: #ffffff; }

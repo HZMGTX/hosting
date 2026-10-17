@@ -1,0 +1,10 @@
+{
+  "name": "Discord.js — slash commands",
+  "description": "Structured bot: one file per command in commands/, events in events/, plus a deploy script. Add feature packs (moderation, economy, welcome, tickets, announcements).",
+  "type": "discord",
+  "runtime": "node",
+  "entry": "index.js",
+  "env": { "DISCORD_BOT_TOKEN": "", "CLIENT_ID": "", "GUILD_ID": "" },
+  "features": true,
+  "order": 2
+}

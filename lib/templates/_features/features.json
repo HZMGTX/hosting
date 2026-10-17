@@ -1,0 +1,39 @@
+[
+  {
+    "id": "moderation",
+    "name": "Moderation",
+    "description": "/kick, /ban, /timeout and /purge with permission checks.",
+    "files": { "commands/moderation.js": "moderation.js" },
+    "intents": []
+  },
+  {
+    "id": "economy",
+    "name": "Economy & levels",
+    "description": "/balance, /daily, /coinflip and /leaderboard. Data is saved to data/economy.json so it survives restarts.",
+    "files": { "commands/economy.js": "economy.js" },
+    "intents": []
+  },
+  {
+    "id": "welcome",
+    "name": "Welcome messages & auto-role",
+    "description": "Greets new members and optionally gives them a role (WELCOME_CHANNEL_ID, AUTO_ROLE_ID). Needs the Server Members privileged intent.",
+    "files": { "events/welcome.js": "welcome.js" },
+    "env": { "WELCOME_CHANNEL_ID": "", "AUTO_ROLE_ID": "" },
+    "intents": ["GuildMembers"]
+  },
+  {
+    "id": "tickets",
+    "name": "Support tickets",
+    "description": "/ticket opens a private channel for the member and staff, with a Close button.",
+    "files": { "commands/tickets.js": "tickets.js" },
+    "env": { "TICKET_STAFF_ROLE_ID": "" },
+    "intents": []
+  },
+  {
+    "id": "announce",
+    "name": "Announcements",
+    "description": "/announce posts a rich embed to any channel (Manage Server only).",
+    "files": { "commands/announce.js": "announce.js" },
+    "intents": []
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "omnihost",
+  "version": "2.1.0",
+  "description": "Self-hosted panel to run Discord bots, web apps, static sites and workers 24/7",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test --test-concurrency=1 \"test/*.test.js\""
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "adm-zip": "^0.6.1",
+    "discord.js": "^14.27.0",
+    "express": "^5.3.0",
+    "multer": "^2.4.0",
+    "pidusage": "^4.1.0",
+    "qrcode": "^1.5.4",
+    "ws": "^8.22.0"
+  }
+}

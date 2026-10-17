@@ -1,0 +1,9 @@
+{
+  "name": "Discord.js — simple bot",
+  "description": "One-file Discord.js v14 bot with a /ping slash command and a !ping text command.",
+  "type": "discord",
+  "runtime": "node",
+  "entry": "index.js",
+  "env": { "DISCORD_BOT_TOKEN": "", "CLIENT_ID": "" },
+  "order": 1
+}

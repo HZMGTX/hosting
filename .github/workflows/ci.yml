@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t omnihost .
+      - name: Smoke test the image
+        run: |
+          docker run -d --name omni -p 3000:3000 omnihost
+          for i in $(seq 1 30); do curl -fs http://localhost:3000/healthz && exit 0; sleep 1; done
+          docker logs omni
+          exit 1

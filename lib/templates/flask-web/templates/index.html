@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Flask App</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 4rem auto; padding: 0 1rem; line-height: 1.5; background: #0b0f19; color: #f3f4f6; }
+    code { background: #1f2937; padding: 2px 6px; border-radius: 4px; }
+    button { background: #6366f1; color: #fff; border: 0; padding: .6rem 1rem; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+    pre { background: #111827; padding: 1rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Flask is running 🐍</h1>
+  <p>Edit <code>app.py</code> and <code>templates/index.html</code> in OmniHost, save, and restart.</p>
+  <button id="btn">Call the API</button>
+  <pre id="out">—</pre>
+  <script>
+    document.getElementById('btn').onclick = async () => {
+      const res = await fetch('api/hello');
+      document.getElementById('out').textContent = JSON.stringify(await res.json(), null, 2);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "Background worker",
+  "description": "Long-running Node.js job (polling, queues, scheduled work) with graceful shutdown.",
+  "type": "worker",
+  "runtime": "node",
+  "entry": "worker.js",
+  "env": { "INTERVAL_SECONDS": "60" },
+  "order": 8
+}

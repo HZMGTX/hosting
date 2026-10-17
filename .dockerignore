@@ -1,0 +1,17 @@
+node_modules
+hosted_bots
+database.json
+database.json.*
+.omnihost
+data
+uploads
+archive-*
+test
+.env
+.env.*
+!.env.example
+.git
+.github
+.claude
+*.log
+*.bak

@@ -1,0 +1,9 @@
+{
+  "name": "Static website",
+  "description": "Plain HTML/CSS/JS served directly by OmniHost — no process needed. Supports single-page apps.",
+  "type": "static",
+  "runtime": "node",
+  "entry": "index.html",
+  "env": {},
+  "order": 6
+}
